@@ -1,0 +1,26 @@
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\bin\Debug\MiCaluculadora.exe.config
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\bin\Debug\MiCaluculadora.exe
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\bin\Debug\MiCaluculadora.pdb
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.csproj.AssemblyReference.cache
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.FormCalculadora.resources
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.Properties.Resources.resources
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.csproj.GenerateResource.cache
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.csproj.CoreCompileInputs.cache
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.exe
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.pdb
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\bin\Debug\Entidades.dll
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\bin\Debug\Entidades.pdb
+C:\Users\mgonzales\source\repos\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.csproj.CopyComplete
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\bin\Debug\MiCaluculadora.exe.config
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\bin\Debug\MiCaluculadora.exe
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\bin\Debug\MiCaluculadora.pdb
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\bin\Debug\Entidades.dll
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\bin\Debug\Entidades.pdb
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.csproj.AssemblyReference.cache
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.FormCalculadora.resources
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.Properties.Resources.resources
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.csproj.GenerateResource.cache
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.csproj.CoreCompileInputs.cache
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.csproj.CopyComplete
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.exe
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP1 - GonzalesFloresMauricioLuciano2D\MiCaluculadora\obj\Debug\MiCaluculadora.pdb
