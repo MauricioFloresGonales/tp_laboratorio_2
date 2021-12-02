@@ -17,3 +17,9 @@ C:\Users\mgonzales\Downloads\TP-02\Entidades\obj\Debug\Entidades.csproj.Assembly
 C:\Users\mgonzales\Downloads\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\mgonzales\Downloads\TP-02\Entidades\obj\Debug\Entidades.dll
 C:\Users\mgonzales\Downloads\TP-02\Entidades\obj\Debug\Entidades.pdb
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\TP-02\Entidades\bin\Debug\Entidades.dll
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\TP-02\Entidades\bin\Debug\Entidades.pdb
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\TP-02\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\TP-02\Entidades\obj\Debug\Entidades.dll
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\TP-02\Entidades\obj\Debug\Entidades.pdb

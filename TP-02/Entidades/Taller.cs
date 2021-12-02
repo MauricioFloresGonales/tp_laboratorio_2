@@ -62,19 +62,19 @@ namespace Entidades
                     case ETipo.Camioneta:
                         if (v.GetType() == typeof(Suv))
                         {
-                            sb.AppendLine(((Suv)v).Mostrar());
+                            sb.AppendLine(v.Mostrar());
                         }
                         break;
                     case ETipo.Moto:
                         if(v.GetType() == typeof(Ciclomotor))
                         {
-                            sb.AppendLine(((Ciclomotor)v).Mostrar());
+                            sb.AppendLine(v.Mostrar());
                         }
                         break;
                     case ETipo.Automovil:
                         if (v.GetType() == typeof(Sedan))
                         {
-                            sb.AppendLine(((Sedan)v).Mostrar());
+                            sb.AppendLine(v.Mostrar());
                         }
                         break;
                     default:
