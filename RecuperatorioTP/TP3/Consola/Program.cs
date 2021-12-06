@@ -15,7 +15,7 @@ namespace Consola
 
             Materia objetoMateria = new Materia();
             int analisisMateria = SistemaDeDatos.ResultadoDeAnalisis(objetoMateria, "nombre", "laboratorio");
-            float porcentajeMateria = SistemaDeDatos.ResultadoDeAnalisisEnPorcentajes(objetoMateria, SistemaDeDatos.AnalizarTotal(objetoMateria, "nombre"), objetoMateria);
+            float porcentajeMateria = SistemaDeDatos.ResultadoDeAnalisisEnPorcentajes(objetoMateria, SistemaDeDatos.AnalizarTotal(objetoMateria, "nombre"), analisisMateria);
 
             Console.WriteLine($"El resultado del analisis es {analisisMateria} y el porcentaje es el {porcentajeMateria}% del totoal de materias");
             Console.ReadKey();
