@@ -39,7 +39,7 @@ namespace FormApp
                         this.cmbEstudio.Items.Add("nombre");
                         this.cmbEstudio.Items.Add("edad");
                         this.cmbEstudio.Items.Add("genero");
-                        this.cmbEstudio.Items.Add("materia");
+                        this.cmbEstudio.Items.Add("materias");
                         break;
                     default:
                         throw new Exception($"{cmbLista.Text} no es un valor posible");
@@ -61,13 +61,15 @@ namespace FormApp
                 switch (cmbLista.Text)
                 {
                     case "materias":
-                        switch (cmbEstudio.Text)
+                        switch (cmbEstudio.Text.ToLower())
                         {
                             case "nombre":
-                                this.lblParamretro.Text = "Ingrese Nombre a evaluar :";
-                                break;
                             case "cantidad de alumnos":
-                                this.cmbParametro.Enabled = false;
+                                this.lblParamretro.Text = "Ingrese Nombre a evaluar :";
+                                foreach (string item in DBConexion.SelectParametros(cmbLista.Text, "nombre"))
+                                {
+                                    this.cmbParametro.Items.Add(item.Trim());
+                                }
                                 break;
                             case "turno":
                                 this.lblParamretro.Text = "Ingrese Turno a evaluar :";
@@ -82,18 +84,26 @@ namespace FormApp
                             case "nombre":
                                 this.lblParamretro.Text = "Ingrese Nombre a evaluar :";
                                 this.cmbParametro.Enabled = true;
+                                foreach (string item in DBConexion.SelectParametros(cmbLista.Text, "nombre"))
+                                {
+                                    this.cmbParametro.Items.Add(item.Trim());
+                                }
                                 break;
                             case "edad":
                                 this.lblParamretro.Text = "Ingrese Edad a evaluar :";
                                 this.cmbParametro.Enabled = true;
+                                foreach (string item in DBConexion.SelectParametros(cmbLista.Text, "edad"))
+                                {
+                                    this.cmbParametro.Items.Add(item.Trim());
+                                }
                                 break;
                             case "genero":
                                 this.lblParamretro.Text = "Ingrese Genero a evaluar :";
                                 this.cmbParametro.Items.Add("masculino");
                                 this.cmbParametro.Items.Add("femenino");
                                 break;
-                            case "materia":
-                                this.lblParamretro.Text = "Ingrese Materia a evaluar :";
+                            case "materias":
+                                this.lblParamretro.Text = "Ingrese el parametro a evaluar :";
                                 this.cmbParametro.Items.Add("total de materias");
                                 this.cmbParametro.Items.Add("mayor concurrencia");
                                 this.cmbParametro.Items.Add("menor concurrencia");
@@ -118,46 +128,19 @@ namespace FormApp
                     Materia aux = new Materia();
                     resultado = SistemaDeDatos.ResultadoDeAnalisis(aux, this.cmbEstudio.Text, this.cmbParametro.Text);
                     porcentaje = SistemaDeDatos.ResultadoDeAnalisisEnPorcentajes(aux, SistemaDeDatos.AnalizarTotal(aux, this.cmbEstudio.Text), resultado);
-
-                    // this.ActualizarGrafico(new Materia(), this.cmbEstudio.Text, this.cmbParametro.Text);
                 }
                 if (this.cmbLista.Text == "alumnos")
                 {
-                    Materia aux = new Materia();
+                    Alumnos aux = new Alumnos();
                     resultado = SistemaDeDatos.ResultadoDeAnalisis(aux, this.cmbEstudio.Text, this.cmbParametro.Text);
                     porcentaje = SistemaDeDatos.ResultadoDeAnalisisEnPorcentajes(aux, SistemaDeDatos.AnalizarTotal(aux, this.cmbEstudio.Text), resultado);
-
-                    // this.ActualizarGrafico(new Alumnos(), this.cmbEstudio.Text, this.cmbParametro.Text);
                 }
                 this.lblResultado.Text = $"El resultado es: {resultado}";
-                this.lblPorcentaje.Text = $"Y el porsentaje es: {porcentaje}%";
+                this.lblPorcentaje.Text = $"Y el porsentaje es: {porcentaje}% del todal";
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message, "Error");
-            }
-        }
-
-        void ActualizarGrafico<T>(T lista, string estudioDe, string parametro) where T : IAnalisis, new()
-        {
-            this.ChartGrafico.Titles.Add(estudioDe);
-
-            this.ChartGrafico.Palette = ChartColorPalette.Pastel;
-
-            int total = SistemaDeDatos.AnalizarTotal(lista, estudioDe);
-
-            int filtro = SistemaDeDatos.ResultadoDeAnalisis(lista, estudioDe, parametro);
-
-            string[] nombres = { "total", "filtro" };
-            int[] result = { total, (total - filtro) };
-
-            for (int i = 0; i < nombres.Length; i++)
-            {
-                Series serie = this.ChartGrafico.Series.Add(nombres[i]);
-
-                serie.Label = result[i].ToString();
-
-                serie.Points.Add(result[i]);
             }
         }
     }

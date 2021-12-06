@@ -177,6 +177,7 @@ namespace Entidades
                         else
                         {
                             item.CantAlumnos = item.CantAlumnos + 1 ;
+                            DBConexion.UpdateCantAlumnos(item);
                         }
                     }
                 }
@@ -212,14 +213,14 @@ namespace Entidades
         }
         public static void HardCodeoDeDatos()
         {
-            Materia matematica = new Materia(Materia.GenerarId(listaDeMaterias), "matematica", ETurno.mañana);
-            Materia laboratorio = new Materia(Materia.GenerarId(listaDeMaterias), "laboratorio", ETurno.mañana);
-            Materia programacion = new Materia(Materia.GenerarId(listaDeMaterias), "programacion", ETurno.mañana);
-            Materia ingles = new Materia(Materia.GenerarId(listaDeMaterias), "ingles", ETurno.mañana);
+            Materia matematica = new Materia("matematica", ETurno.mañana);
+            Materia laboratorio = new Materia("laboratorio", ETurno.mañana);
+            Materia programacion = new Materia("programacion", ETurno.mañana);
+            Materia ingles = new Materia("ingles", ETurno.mañana);
 
-            Alumnos alumno1 = new Alumnos(1, "mauricio", 19, "masculino", new List<Materia>() { matematica, laboratorio });
-            Alumnos alumno2 = new Alumnos(2, "luciano", 21, "masculino", new List<Materia>() { programacion, ingles });
-            Alumnos alumno3 = new Alumnos(3, "florensia", 21, "femenino", new List<Materia>() { programacion, laboratorio });
+            Alumnos alumno1 = new Alumnos("mauricio", 19, "masculino", new List<Materia>() { matematica, laboratorio });
+            Alumnos alumno2 = new Alumnos("luciano", 21, "masculino", new List<Materia>() { programacion, ingles });
+            Alumnos alumno3 = new Alumnos("florencia", 21, "femenino", new List<Materia>() { programacion, laboratorio });
 
             listaDeMaterias += matematica;
             listaDeMaterias += laboratorio;

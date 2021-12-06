@@ -43,10 +43,10 @@ namespace FormApp
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnRetirar = new System.Windows.Forms.Button();
             this.gboxMaterias = new System.Windows.Forms.GroupBox();
-            this.lstMaterias = new System.Windows.Forms.ListView();
             this.cmbMateria = new System.Windows.Forms.ComboBox();
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.rtxMaterias = new System.Windows.Forms.RichTextBox();
             this.gboxMaterias.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -183,7 +183,7 @@ namespace FormApp
             // 
             // gboxMaterias
             // 
-            this.gboxMaterias.Controls.Add(this.lstMaterias);
+            this.gboxMaterias.Controls.Add(this.rtxMaterias);
             this.gboxMaterias.Controls.Add(this.txtEdad);
             this.gboxMaterias.Controls.Add(this.cmbGenero);
             this.gboxMaterias.Controls.Add(this.lblEdad);
@@ -197,15 +197,6 @@ namespace FormApp
             this.gboxMaterias.Size = new System.Drawing.Size(218, 215);
             this.gboxMaterias.TabIndex = 15;
             this.gboxMaterias.TabStop = false;
-            // 
-            // lstMaterias
-            // 
-            this.lstMaterias.HideSelection = false;
-            this.lstMaterias.Location = new System.Drawing.Point(77, 86);
-            this.lstMaterias.Name = "lstMaterias";
-            this.lstMaterias.Size = new System.Drawing.Size(135, 123);
-            this.lstMaterias.TabIndex = 15;
-            this.lstMaterias.UseCompatibleStateImageBehavior = false;
             // 
             // cmbMateria
             // 
@@ -235,6 +226,14 @@ namespace FormApp
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // rtxMaterias
+            // 
+            this.rtxMaterias.Location = new System.Drawing.Point(77, 87);
+            this.rtxMaterias.Name = "rtxMaterias";
+            this.rtxMaterias.Size = new System.Drawing.Size(135, 122);
+            this.rtxMaterias.TabIndex = 15;
+            this.rtxMaterias.Text = "";
+            // 
             // FrmCrearEncuesta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,7 +250,9 @@ namespace FormApp
             this.Controls.Add(this.rbtnAlumno);
             this.Controls.Add(this.rbtnMateria);
             this.Name = "FrmCrearEncuesta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrearEncuesta";
+            this.Load += new System.EventHandler(this.FrmCrearEncuesta_Load);
             this.gboxMaterias.ResumeLayout(false);
             this.gboxMaterias.PerformLayout();
             this.ResumeLayout(false);
@@ -278,6 +279,6 @@ namespace FormApp
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.ComboBox cmbMateria;
-        private System.Windows.Forms.ListView lstMaterias;
+        private System.Windows.Forms.RichTextBox rtxMaterias;
     }
 }

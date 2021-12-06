@@ -133,11 +133,10 @@ namespace Entidades
                 switch (parametro)
                 {
                     case "nombre":
-                        return 6;
                     case "cantidad de Alumnos":
-                        return 6;
                     case "turno":
-                        return 2;
+                        string resultado = DBConexion.SelectTotalDe("materia", parametro);
+                        return int.Parse(resultado);
                     default:
                         throw new Exception("No se ingreso un analisis valido.");
                 }
@@ -366,7 +365,7 @@ namespace Entidades
                 string[] ids = new string[lenght];
                 for (int i = 0; i < lenght; i++)
                 {
-                    ids[i] = this.Alumnos.ElementAt(i).Id.ToString();
+                    ids[i] = DBConexion.SelectIdAlumno(this.Alumnos[i]).ToString();
                 }
                 return String.Join(",", ids);
             }
@@ -413,6 +412,10 @@ namespace Entidades
         {
             if (!object.ReferenceEquals(materia, null))
             {
+                if (!DBConexion.ConfirmarExistenciaMateria(materia.Nombre, materia.Turno.ToString()))
+                {
+                    DBConexion.InsertMaterias(materia);
+                }
                 if (listaMaterias.Count == 0)
                 {
                     listaMaterias.Add(materia);

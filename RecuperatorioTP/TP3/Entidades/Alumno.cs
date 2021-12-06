@@ -44,7 +44,7 @@ namespace Entidades
             this.edad = edad;
             this.genero = genero;
         }
-        public Alumnos(string nombre, int edad, string genero, List<Materia> materias) : this(nombre,edad,nombre)
+        public Alumnos(string nombre, int edad, string genero, List<Materia> materias) : this(nombre,edad,genero)
         {
             this.materias = materias;
         }
@@ -122,13 +122,11 @@ namespace Entidades
                 switch (parametro)
                 {
                     case "nombre":
-                        return 6;
                     case "edad":
-                        return 6;
                     case "genero":
-                        return 2;
                     case "materias":
-                        return 4;
+                        string resultado = DBConexion.SelectTotalDe("alumno", parametro);
+                        return int.Parse(resultado);
                     default:
                         throw new Exception("No se ingreso un analisis valido.");
                 }
@@ -279,7 +277,7 @@ namespace Entidades
             string[] ids = new string[lenght];
             for (int i = 0; i < lenght; i++)
             {
-                ids[i] = this.Materias.ElementAt(i).Id.ToString();
+                ids[i] = DBConexion.SelectIdMateria(this.Materias[i]).ToString();
             }
             return String.Join(",", ids);
         }
@@ -289,6 +287,10 @@ namespace Entidades
             {
                 if (!object.ReferenceEquals(alumno, null))
                 {
+                    if (!DBConexion.ConfirmarExistenciaAlumno(alumno.Id.ToString()))
+                    {
+                        DBConexion.InsertAlumnos(alumno);
+                    }
                     listaAlumnos.Add(alumno);
                     return listaAlumnos;
                 }

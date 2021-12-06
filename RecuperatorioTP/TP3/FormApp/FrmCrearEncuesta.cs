@@ -13,7 +13,7 @@ namespace FormApp
 {
     public partial class FrmCrearEncuesta : Form
     {
-        Stack<Materia> materias;
+        Stack<Materia> stackMaterias;
         public FrmCrearEncuesta()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace FormApp
         private void rbtnAlumno_CheckedChanged(object sender, EventArgs e)
         {
             this.gboxMaterias.Visible = true;
-            materias = new Stack<Materia>();
+            stackMaterias = new Stack<Materia>();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
@@ -38,54 +38,89 @@ namespace FormApp
                 {
                     Materia auxMateria = new Materia(this.txtNombre.Text, Materia.AnalisisDeTurnos(this.cmbTurno.Text));
                     SistemaDeDatos.AgregarMateria(auxMateria);
-                    DBConexion.InsertMaterias(auxMateria);
                 }
                 if (this.rbtnAlumno.Checked)
                 {
                     List<Materia> aux = new List<Materia>();
-                    foreach (Materia item in materias)
+                    foreach (Materia item in stackMaterias)
                     {
                         aux.Add(item);
                     }
                     Alumnos nuevoAlumno = SistemaDeDatos.AgregarAlumnoAMateria(new Alumnos(this.txtNombre.Text, int.Parse(this.txtEdad.Text), this.cmbGenero.Text, aux));
                     SistemaDeDatos.AgregarAlumno(nuevoAlumno);
-                    DBConexion.InsertAlumnos(nuevoAlumno);
                     foreach (Materia item in nuevoAlumno.Materias)
                     {
-                        DBConexion.InsertAlumnoAMaterias(item, nuevoAlumno.Id);
+                        DBConexion.UptdateAlumnoAMaterias(item, nuevoAlumno.Id);
                     }
-                    
                 }
+                this.Limpiar();
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.ToString());
+                MessageBox.Show(err.Message);
             }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.Limpiar();
+        }
+        private void Limpiar()
         {
             this.txtNombre.Text = "";
             this.cmbTurno.Text = "";
             this.txtEdad.Text = "";
             this.cmbGenero.Text = "";
             this.cmbMateria.Text = "";
-            this.lstMaterias.Text = "";
+            this.rtxMaterias.Text = "";
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            materias.Push(new Materia(this.cmbMateria.Text, Materia.AnalisisDeTurnos(this.cmbTurno.Text)));
+            try
+            {
+                stackMaterias.Push(new Materia(this.cmbMateria.Text, Materia.AnalisisDeTurnos(this.cmbTurno.Text)));
 
-            this.lstMaterias.Text = "";
+                this.mostrarStacMaterias(stackMaterias);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+            
+        }
+        private void mostrarStacMaterias(Stack<Materia> materias)
+        {
+            this.cmbMateria.Text = "";
+            this.cmbMateria.SelectedItem = null;
+            this.rtxMaterias.Text = "";
+
+            StringBuilder sb = new StringBuilder();
             foreach (Materia item in materias)
             {
-                this.lstMaterias.Items.Add(item.Nombre.ToString());
+                sb.AppendLine(item.Nombre.ToString());
             }
+            this.rtxMaterias.Text = sb.ToString();
         }
         private void btnRetirar_Click(object sender, EventArgs e)
         {
-            materias.Pop();
+            stackMaterias.Pop();
+            this.mostrarStacMaterias(stackMaterias);
+        }
+
+        private void FrmCrearEncuesta_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (string item in DBConexion.SelectParametros("materias", "nombre"))
+                {
+                    this.cmbMateria.Items.Add(item.Trim());
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
     }
 }

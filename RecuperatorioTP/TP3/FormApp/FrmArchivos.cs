@@ -22,7 +22,6 @@ namespace FormApp
         {
             try
             {
-
                 Archivos.GenerarAnalisis(SistemaDeDatos.ListaDeAlumnos, "Alumnos.txt");
             }
             catch (Exception err)

@@ -120,7 +120,7 @@ namespace FormApp
             // 
             this.lblPorcentaje.AutoSize = true;
             this.lblPorcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPorcentaje.Location = new System.Drawing.Point(297, 89);
+            this.lblPorcentaje.Location = new System.Drawing.Point(224, 89);
             this.lblPorcentaje.Name = "lblPorcentaje";
             this.lblPorcentaje.Size = new System.Drawing.Size(105, 20);
             this.lblPorcentaje.TabIndex = 9;
