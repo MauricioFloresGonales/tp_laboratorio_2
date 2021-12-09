@@ -1,0 +1,10 @@
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\Consola\obj\Debug\Consola.csproj.AssemblyReference.cache
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\Consola\obj\Debug\Consola.csproj.CoreCompileInputs.cache
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\Consola\bin\Debug\Consola.exe.config
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\Consola\bin\Debug\Consola.exe
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\Consola\bin\Debug\Consola.pdb
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\Consola\bin\Debug\Entidades.dll
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\Consola\bin\Debug\Entidades.pdb
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\Consola\obj\Debug\Consola.csproj.CopyComplete
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\Consola\obj\Debug\Consola.exe
+C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\Consola\obj\Debug\Consola.pdb
