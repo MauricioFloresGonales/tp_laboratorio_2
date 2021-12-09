@@ -28,8 +28,8 @@ namespace FormApp
             try
             {
                 Task hilo = Task.Run(() => Archivos.GenerarAnalisis(SistemaDeDatos.ListaDeAlumnos, "Alumnos.txt"));
-                Task hilo = Task.Run(() => Archivos.GenerarJson(SistemaDeDatos.ListaDeAlumnos, "Alumnos.txt"));
-                Task hilo = Task.Run(() => Archivos.GenerarXML(SistemaDeDatos.ListaDeAlumnos, "Alumnos.txt"));
+                Task hilo1 = Task.Run(() => Archivos.GenerarJson(SistemaDeDatos.ListaDeAlumnos, "Alumnos.txt"));
+                Task hilo2 = Task.Run(() => Archivos.GenerarXML(SistemaDeDatos.ListaDeAlumnos, "Alumnos.txt"));
             }
             catch (Exception err)
             {
@@ -42,8 +42,8 @@ namespace FormApp
             try
             {
                 Task hilo = Task.Run(() => Archivos.GenerarAnalisis(SistemaDeDatos.ListaDeMaterias, "Materias.txt"));
-                Task hilo = Task.Run(() => Archivos.GenerarJson(SistemaDeDatos.ListaDeMaterias, "Materias.txt"));
-                Task hilo = Task.Run(() => Archivos.GenerarXML(SistemaDeDatos.ListaDeMaterias, "Materias.txt"));
+                Task hilo1 = Task.Run(() => Archivos.GenerarJson(SistemaDeDatos.ListaDeMaterias, "Materias.txt"));
+                Task hilo2 = Task.Run(() => Archivos.GenerarXML(SistemaDeDatos.ListaDeMaterias, "Materias.txt"));
             }
             catch (Exception err)
             {
