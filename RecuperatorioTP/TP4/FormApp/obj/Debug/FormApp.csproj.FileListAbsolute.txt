@@ -67,6 +67,5 @@ C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioT
 C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\FormApp\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\FormApp\bin\Debug\System.ValueTuple.xml
 C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\FormApp\bin\Debug\System.Text.Json.xml
-C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\FormApp\obj\Debug\FormApp.csproj.CopyComplete
 C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\FormApp\obj\Debug\FormApp.exe
 C:\Users\mgonzales\OneDrive - Tesacom\Escritorio\tp_laboratorio_2\RecuperatorioTP\TP4\FormApp\obj\Debug\FormApp.pdb
